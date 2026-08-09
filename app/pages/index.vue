@@ -141,7 +141,7 @@ watch([search, fromDate, toDate, cities, genres, tags, price], () => {
 
 useSeoMeta({
   title: 'Great Lakes Gigs',
-  description: 'A compilation of upcoming live music from independent venues across Milwaukee, Chicago, and neighboring areas.',
+  description: 'A compilation of upcoming shows from independent venues across Milwaukee, Chicago, and neighboring areas.',
 })
 </script>
 
