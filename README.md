@@ -1,3 +1,2 @@
 # Great Lakes Gigs
-A compilation of upcoming shows from independent venues across the midwest
-
+A compilation of upcoming shows from independent music venues across the midwest.
