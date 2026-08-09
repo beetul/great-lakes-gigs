@@ -12,7 +12,7 @@ const genres = ref<string[]>([])
 const tags = ref<string[]>([])
 const price = ref<string | null>(null)
 const page = ref(1)
-const pageSize = 20
+const pageSize = 28
 
 const { data: cityOptions } = await useAsyncData('city-options', async () => {
   const { data, error } = await supabase.rpc('distinct_cities')
@@ -40,7 +40,7 @@ const { data: tagOptions } = await useAsyncData('tag-options', async () => {
   const { data, error } = await supabase.rpc('distinct_tags')
   if (error) throw error
 
-  const priority = ['outdoors', 'all ages', '21+', 'touring', 'diy', 'house show']
+  const priority = ['all ages', 'regional', 'touring', 'festival', 'outdoors', 'diy']
 
   return (data ?? []).filter(Boolean).sort((a, b) => {
     const aIndex = priority.indexOf(a)
