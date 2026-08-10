@@ -7,8 +7,11 @@
     <div class="absolute inset-0 bg-black/40"></div>
 
     <NuxtLink to="/" class="relative flex items-center gap-2">
-      <span class="text-3xl md:text-3xl font-display tracking-wide text-brand">GREAT LAKES </span>
-      <span class="text-3xl md:text-3xl font-display tracking-wide text-white">GIGS</span>
+      <img
+        src="/images/glg.png"
+        alt="Great Lakes Gigs"
+        class="h-24 md:h-28 w-auto"
+      />
     </NuxtLink>
   </div>
 </template>
