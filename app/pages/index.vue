@@ -84,11 +84,17 @@ const { data: shows } = await useAsyncData('upcoming-shows', async () => {
   } else if (price.value === '$15 and under') {
     query = query.eq('price_type', 'fixed').lte('price_min', 15)
   } else if (price.value === '$16-35') {
-    query = query.eq('price_type', 'fixed').gte('price_min', 16).lte('price_min', 35)
+    query = query.eq('price_type', 'fixed').or(
+      'and(price_max.not.is.null,price_min.lte.35,price_max.gte.16),and(price_max.is.null,price_min.gte.16,price_min.lte.35)'
+    )
   } else if (price.value === '$36-60') {
-    query = query.eq('price_type', 'fixed').gte('price_min', 36).lte('price_min', 60)
+    query = query.eq('price_type', 'fixed').or(
+      'and(price_max.not.is.null,price_min.lte.60,price_max.gte.36),and(price_max.is.null,price_min.gte.36,price_min.lte.60)'
+    )
   } else if (price.value === '$61+') {
-    query = query.eq('price_type', 'fixed').gte('price_min', 61)
+    query = query.eq('price_type', 'fixed').or(
+      'price_max.gte.61,and(price_max.is.null,price_min.gte.61)'
+    )
   }
 
   const from = (page.value - 1) * pageSize
