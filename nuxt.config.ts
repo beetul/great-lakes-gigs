@@ -27,6 +27,9 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      script: [
+        { src: '/_vercel/insights/script.js', defer: true }
+      ],
       link: [
         { rel: 'icon', href: 'data:,' }
       ]
