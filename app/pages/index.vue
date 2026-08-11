@@ -298,8 +298,8 @@ useSeoMeta({
               <button
                 v-else
                 @click="page = p"
-                :class="page === p ? 'bg-brand text-black' : 'text-zinc-300 hover:bg-zinc-800'"
-                class="w-9 h-9 rounded-lg text-sm font-semibold transition"
+                :class="page === p ? 'text-brand' : 'text-zinc-300'"
+                class="w-9 h-9 rounded-lg text-sm transition"
               >
                 {{ p }}
               </button>
