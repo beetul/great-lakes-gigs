@@ -40,7 +40,7 @@ const { data: tagOptions } = await useAsyncData('tag-options', async () => {
   const { data, error } = await supabase.rpc('distinct_tags')
   if (error) throw error
 
-  const priority = ['all ages', 'touring', 'festival', 'local show', 'outdoors', 'diy']
+  const priority = ['all ages', 'touring', 'festival', 'local show', '18+', '21+']
 
   return (data ?? []).filter(Boolean).sort((a, b) => {
     const aIndex = priority.indexOf(a)
