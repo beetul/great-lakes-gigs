@@ -24,7 +24,7 @@ const { data: genreOptions } = await useAsyncData('genre-options', async () => {
   const { data, error } = await supabase.rpc('distinct_genres')
   if (error) throw error
 
-  const priority = ['emo', 'punk', 'hardcore', 'metalcore', 'metal', 'midwest emo', 'alternative']
+  const priority = ['emo', 'punk', 'hardcore', 'metal', 'pop punk', 'indie', 'post hardcore', 'metalcore', 'midwest emo', 'electronic']
 
   return (data ?? []).filter(Boolean).sort((a, b) => {
     const aIndex = priority.indexOf(a)
@@ -40,7 +40,7 @@ const { data: tagOptions } = await useAsyncData('tag-options', async () => {
   const { data, error } = await supabase.rpc('distinct_tags')
   if (error) throw error
 
-  const priority = ['all ages', 'regional', 'touring', 'festival', 'outdoors', 'diy']
+  const priority = ['all ages', 'touring', 'festival', 'local show', 'outdoors', 'diy']
 
   return (data ?? []).filter(Boolean).sort((a, b) => {
     const aIndex = priority.indexOf(a)

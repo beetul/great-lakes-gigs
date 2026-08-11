@@ -102,7 +102,7 @@ function toggleTag(value: string) {
       <h3 class="text-xs font-bold text-zinc-400 tracking-widest mb-2">GENRES</h3>
       <div class="flex flex-wrap gap-2">
         <button
-          v-for="g in (genresExpanded ? genreOptions : genreOptions.slice(0, 7))"
+          v-for="g in (genresExpanded ? genreOptions : genreOptions.slice(0, 10))"
           :key="g"
           @click="toggleGenre(g)"
           :class="genres.includes(g) ? 'bg-brand text-black border-brand' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
@@ -112,11 +112,11 @@ function toggleTag(value: string) {
         </button>
       </div>
       <button
-        v-if="genreOptions.length > 7"
+        v-if="genreOptions.length > 10"
         @click="genresExpanded = !genresExpanded"
         class="text-xs text-zinc-500 hover:text-brand transition mt-2"
       >
-        {{ genresExpanded ? '− show less' : `+ more genres (${genreOptions.length - 7})` }}
+        {{ genresExpanded ? '− show less' : `+ more genres (${genreOptions.length - 10})` }}
       </button>
     </div>
 
