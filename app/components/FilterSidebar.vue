@@ -1,4 +1,3 @@
-<!-- app/components/FilterSidebar.vue -->
 <script setup lang="ts">
 defineProps<{
   cityOptions: string[]

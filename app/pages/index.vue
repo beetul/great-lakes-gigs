@@ -1,4 +1,3 @@
-<!-- app/pages/index.vue -->
 <script setup lang="ts">
 const supabase = useSupabaseClient()
 const view = useState<'grid' | 'list'>('showView', () => 'grid')

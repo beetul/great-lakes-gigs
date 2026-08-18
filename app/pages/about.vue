@@ -1,4 +1,3 @@
-<!-- app/pages/about.vue -->
 <script setup lang="ts">
 useSeoMeta({
   title: 'About',

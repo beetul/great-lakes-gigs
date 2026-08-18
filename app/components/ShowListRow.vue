@@ -1,4 +1,3 @@
-<!-- app/components/ShowListRow.vue -->
 <script setup lang="ts">
 const props = defineProps<{
   show: {

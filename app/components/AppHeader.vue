@@ -1,4 +1,3 @@
-<!-- app/components/AppHeader.vue -->
 <script setup lang="ts"></script>
 
 <template>

@@ -1,4 +1,3 @@
-<!-- app/components/ShowCard.vue -->
 <script setup lang="ts">
 const props = defineProps<{
   show: {
