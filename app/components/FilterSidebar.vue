@@ -15,8 +15,9 @@ const price = defineModel<string | null>('price', { required: true })
 
 const genresExpanded = ref(false)
 const tagsExpanded = ref(false)
+const citiesExpanded = ref(false)
 
-const priceOptions = ['free', 'pwyw', '$15 and under', '$16-35', '$36-60', '$61+']
+const priceOptions = ['free', 'pwyc', '$15 and under', '$15-35', '$35-50', '$50+']
 
 function toggleCity(value: string) {
   cities.value = cities.value.includes(value)
@@ -86,7 +87,7 @@ function toggleTag(value: string) {
       <h3 class="text-xs font-bold text-zinc-400 tracking-widest mb-2">CITY</h3>
       <div class="flex flex-wrap gap-2">
         <button
-          v-for="c in cityOptions"
+          v-for="c in (citiesExpanded ? cityOptions : cityOptions.slice(0, 4))"
           :key="c"
           @click="toggleCity(c)"
           :class="cities.includes(c) ? 'bg-brand text-black border-brand' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
@@ -95,6 +96,13 @@ function toggleTag(value: string) {
           {{ c }}
         </button>
       </div>
+      <button
+        v-if="cityOptions.length > 4"
+        @click="citiesExpanded = !citiesExpanded"
+        class="text-xs text-zinc-500 hover:text-brand transition mt-2"
+      >
+        {{ citiesExpanded ? '− show less' : `+ more cities (${cityOptions.length - 4})` }}
+      </button>
     </div>
 
     <div class="border-t border-zinc-800 pt-6">

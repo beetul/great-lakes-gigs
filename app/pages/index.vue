@@ -16,7 +16,17 @@ const pageSize = 28
 const { data: cityOptions } = await useAsyncData('city-options', async () => {
   const { data, error } = await supabase.rpc('distinct_cities')
   if (error) throw error
-  return (data ?? []).filter(Boolean).sort()
+
+  const priority = ['Milwaukee', 'Chicago', 'Madison']
+
+  return (data ?? []).filter(Boolean).sort((a, b) => {
+    const aIndex = priority.indexOf(a)
+    const bIndex = priority.indexOf(b)
+    if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex
+    if (aIndex !== -1) return -1
+    if (bIndex !== -1) return 1
+    return a.localeCompare(b)
+  })
 })
 
 const { data: genreOptions } = await useAsyncData('genre-options', async () => {
@@ -78,21 +88,21 @@ const { data: shows } = await useAsyncData('upcoming-shows', async () => {
 
   if (price.value === 'free') {
     query = query.eq('price_type', 'free')
-  } else if (price.value === 'pwyw') {
-    query = query.eq('price_type', 'pwyw')
+  } else if (price.value === 'pwyc') {
+    query = query.eq('price_type', 'pwyc')
   } else if (price.value === '$15 and under') {
     query = query.eq('price_type', 'fixed').lte('price_min', 15)
-  } else if (price.value === '$16-35') {
+  } else if (price.value === '$15-35') {
     query = query.eq('price_type', 'fixed').or(
-      'and(price_max.not.is.null,price_min.lte.35,price_max.gte.16),and(price_max.is.null,price_min.gte.16,price_min.lte.35)'
+      'and(price_max.not.is.null,price_min.lte.35,price_max.gte.15),and(price_max.is.null,price_min.gte.15,price_min.lte.35)'
     )
-  } else if (price.value === '$36-60') {
+  } else if (price.value === '$35-50') {
     query = query.eq('price_type', 'fixed').or(
-      'and(price_max.not.is.null,price_min.lte.60,price_max.gte.36),and(price_max.is.null,price_min.gte.36,price_min.lte.60)'
+      'and(price_max.not.is.null,price_min.lte.50,price_max.gte.35),and(price_max.is.null,price_min.gte.35,price_min.lte.50)'
     )
-  } else if (price.value === '$61+') {
+  } else if (price.value === '$50+') {
     query = query.eq('price_type', 'fixed').or(
-      'price_max.gte.61,and(price_max.is.null,price_min.gte.61)'
+      'price_max.gte.50,and(price_max.is.null,price_min.gte.50)'
     )
   }
 
@@ -230,7 +240,7 @@ useSeoMeta({
                   <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
                 </svg>
               </button>
-              <h1 class="text-2xl font-display tracking-wide text-white">UPCOMING SHOWS</h1>
+              <h1 class="text-2xl font-display tracking-wide text-white">UPCOMING</h1>
             </div>
 
             <div class="flex gap-1 bg-zinc-900 rounded-md p-1">
