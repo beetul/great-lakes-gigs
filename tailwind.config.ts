@@ -7,8 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: '#4b91e2',
-        accent: '#4b91e2',
+        brandColor: '#4b91e2',
+        accentColor: '#b76ee7',
+        highlightColor: '#e7b76e',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

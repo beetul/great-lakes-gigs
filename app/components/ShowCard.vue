@@ -33,20 +33,20 @@ const monthDay = computed(() => {
   :href="show.ticket_url"
   target="_blank"
   rel="noopener noreferrer"
-  class="flex items-center bg-zinc-900 border-l-4 border-accent mb-4 group hover:bg-zinc-800 transition"
+  class="flex items-center bg-zinc-900 border-l-4 border-brandColor mb-4 group hover:bg-zinc-800 transition"
 >
   <div class="flex flex-col items-center justify-center px-6 py-4 min-w-[100px]">
     <p class="text-white font-black text-base tracking-wide">{{ weekday }}</p>
     <div class="w-8 h-px bg-zinc-600 my-1"></div>
-    <p class="text-accent font-black text-xl">{{ monthDay }}</p>
+    <p class="text-brandColor font-black text-xl">{{ monthDay }}</p>
   </div>
 
   <div class="flex-1 py-4 pr-4 border-l border-zinc-800 pl-4">
-    <h3 class="text-xl font-display tracking-wide text-white group-hover:text-accent transition">
+    <h3 class="text-xl font-display tracking-wide text-white group-hover:text-brandColor transition">
       {{ show.title }}
     </h3>
     <p class="text-zinc-400 text-base">
-      <span class="text-emerald-300 font-bold">@ {{ show.venue }}</span> · {{ show.show_time }} · {{ show.price_display }}
+      <span class="text-emerald-300 font-bold">@ {{ show.venue }}</span> / {{ show.show_time }} / {{ show.price_display }}
     </p>
 
     <div class="flex gap-2 mt-2 flex-wrap">
@@ -82,7 +82,7 @@ const monthDay = computed(() => {
   </div>
 
   <div class="pr-6">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-zinc-600 group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-zinc-600 group-hover:text-brandColor group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition">
       <line x1="7" y1="17" x2="17" y2="7"></line>
       <polyline points="7 7 17 7 17 17"></polyline>
     </svg>

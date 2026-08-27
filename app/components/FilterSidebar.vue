@@ -46,7 +46,7 @@ function toggleTag(value: string) {
         v-model="search"
         type="text"
         placeholder="search by artist, band, or venue"
-        class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-brand"
+        class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-brandColor"
       />
     </div>
 
@@ -56,7 +56,7 @@ function toggleTag(value: string) {
         <button
           v-if="fromDate || toDate"
           @click="fromDate = ''; toDate = ''"
-          class="text-xs text-zinc-500 hover:text-brand transition"
+          class="text-xs text-zinc-500 hover:text-brandColor transition"
         >
           clear dates
         </button>
@@ -67,7 +67,7 @@ function toggleTag(value: string) {
           <input
             type="date"
             v-model="fromDate"
-            class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
+            class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-brandColor"
             style="color-scheme: dark;"
           />
         </div>
@@ -76,7 +76,7 @@ function toggleTag(value: string) {
           <input
             type="date"
             v-model="toDate"
-            class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
+            class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-brandColor"
             style="color-scheme: dark;"
           />
         </div>
@@ -90,7 +90,7 @@ function toggleTag(value: string) {
           v-for="c in (citiesExpanded ? cityOptions : cityOptions.slice(0, 4))"
           :key="c"
           @click="toggleCity(c)"
-          :class="cities.includes(c) ? 'bg-brand text-black border-brand' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
+          :class="cities.includes(c) ? 'bg-brandColor text-black border-brandColor' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
           class="px-3 py-1.5 rounded-full border text-sm font-semibold transition"
         >
           {{ c }}
@@ -99,7 +99,7 @@ function toggleTag(value: string) {
       <button
         v-if="cityOptions.length > 4"
         @click="citiesExpanded = !citiesExpanded"
-        class="text-xs text-zinc-500 hover:text-brand transition mt-2"
+        class="text-xs text-zinc-500 hover:text-brandColor transition mt-2"
       >
         {{ citiesExpanded ? '− show less' : `+ more cities (${cityOptions.length - 4})` }}
       </button>
@@ -112,7 +112,7 @@ function toggleTag(value: string) {
           v-for="g in (genresExpanded ? genreOptions : genreOptions.slice(0, 10))"
           :key="g"
           @click="toggleGenre(g)"
-          :class="genres.includes(g) ? 'bg-brand text-black border-brand' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
+          :class="genres.includes(g) ? 'bg-brandColor text-black border-brandColor' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
           class="px-3 py-1.5 rounded-full border text-sm font-semibold transition"
         >
           {{ g }}
@@ -121,7 +121,7 @@ function toggleTag(value: string) {
       <button
         v-if="genreOptions.length > 10"
         @click="genresExpanded = !genresExpanded"
-        class="text-xs text-zinc-500 hover:text-brand transition mt-2"
+        class="text-xs text-zinc-500 hover:text-brandColor transition mt-2"
       >
         {{ genresExpanded ? '− show less' : `+ more genres (${genreOptions.length - 10})` }}
       </button>
@@ -134,7 +134,7 @@ function toggleTag(value: string) {
           v-for="t in (tagsExpanded ? tagOptions : tagOptions.slice(0, 6))"
           :key="t"
           @click="toggleTag(t)"
-          :class="tags.includes(t) ? 'bg-brand text-black border-brand' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
+          :class="tags.includes(t) ? 'bg-brandColor text-black border-brandColor' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
           class="px-3 py-1.5 rounded-full border text-sm font-semibold transition"
         >
           {{ t }}
@@ -143,7 +143,7 @@ function toggleTag(value: string) {
       <button
         v-if="tagOptions.length > 6"
         @click="tagsExpanded = !tagsExpanded"
-        class="text-xs text-zinc-500 hover:text-brand transition mt-2"
+        class="text-xs text-zinc-500 hover:text-brandColor transition mt-2"
       >
         {{ tagsExpanded ? '− show less' : `+ more tags (${tagOptions.length - 6})` }}
       </button>
@@ -156,7 +156,7 @@ function toggleTag(value: string) {
           v-for="opt in priceOptions"
           :key="opt"
           @click="price = price === opt ? null : opt"
-          :class="price === opt ? 'bg-brand text-black border-brand' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
+          :class="price === opt ? 'bg-brandColor text-black border-brandColor' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
           class="px-3 py-1.5 rounded-full border text-sm font-semibold transition"
         >
           {{ opt }}

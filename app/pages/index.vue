@@ -246,7 +246,7 @@ useSeoMeta({
             <div class="flex gap-1 bg-zinc-900 rounded-md p-1">
               <button
                 @click="view = 'grid'"
-                :class="view === 'grid' ? 'bg-brand text-black' : 'text-zinc-500'"
+                :class="view === 'grid' ? 'bg-brandColor text-black' : 'text-zinc-500'"
                 class="p-1.5 rounded transition"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
@@ -258,7 +258,7 @@ useSeoMeta({
               </button>
               <button
                 @click="view = 'list'"
-                :class="view === 'list' ? 'bg-brand text-black' : 'text-zinc-500'"
+                :class="view === 'list' ? 'bg-brandColor text-black' : 'text-zinc-500'"
                 class="p-1.5 rounded transition"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="w-4 h-4">
@@ -307,7 +307,7 @@ useSeoMeta({
               <button
                 v-else
                 @click="page = p"
-                :class="page === p ? 'text-brand' : 'text-zinc-300'"
+                :class="page === p ? 'text-brandColor' : 'text-zinc-300'"
                 class="w-9 h-9 rounded-lg text-sm transition"
               >
                 {{ p }}

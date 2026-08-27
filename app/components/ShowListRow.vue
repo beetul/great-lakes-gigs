@@ -30,19 +30,19 @@ const monthDay = computed(() => {
 >
   <div class="min-w-[70px]">
     <p class="text-zinc-500 text-xs font-semibold tracking-wide">{{ weekday }}</p>
-    <p class="text-accent font-bold text-sm">{{ monthDay }}</p>
+    <p class="text-brandColor font-bold text-sm">{{ monthDay }}</p>
   </div>
 
   <div class="flex-1">
-    <h3 class="text-white font-bold group-hover:text-accent transition">
+    <h3 class="text-white font-bold group-hover:text-brandColor transition">
       {{ show.title }}
     </h3>
     <p class="text-zinc-500 text-sm">
-      {{ show.venue }} · {{ show.price_display }}
+      {{ show.venue }} / {{show.show_time }} / {{ show.price_display }}
     </p>
   </div>
 
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-zinc-600 group-hover:text-accent transition">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-zinc-600 group-hover:text-brandColor transition">
     <line x1="7" y1="17" x2="17" y2="7"></line>
     <polyline points="7 7 17 7 17 17"></polyline>
   </svg>
