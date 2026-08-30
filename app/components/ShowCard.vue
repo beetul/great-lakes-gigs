@@ -73,9 +73,6 @@ const monthDay = computed(() => {
         :key="tag"
         class="flex items-center gap-1 px-3 py-1 rounded-full border border-zinc-800 text-sm font-semibold text-zinc-400"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5">
-          <path d="M20 10V8h-4V4h-2v4h-4V4H8v4H4v2h4v4H4v2h4v4h2v-4h4v4h2v-4h4v-2h-4v-4h4zm-6 4h-4v-4h4v4z"/>
-        </svg>
         {{ tag }}
       </span>
     </div>

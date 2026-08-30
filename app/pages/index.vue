@@ -90,8 +90,8 @@ const { data: shows } = await useAsyncData('upcoming-shows', async () => {
     query = query.eq('price_type', 'free')
   } else if (price.value === 'pwyc') {
     query = query.eq('price_type', 'pwyc')
-  } else if (price.value === '$15 and under') {
-    query = query.eq('price_type', 'fixed').lte('price_min', 15)
+  } else if (price.value === 'below $15') {
+    query = query.eq('price_type', 'fixed').lt('price_min', 15)
   } else if (price.value === '$15-35') {
     query = query.eq('price_type', 'fixed').or(
       'and(price_max.not.is.null,price_min.lte.35,price_max.gte.15),and(price_max.is.null,price_min.gte.15,price_min.lte.35)'
@@ -102,7 +102,7 @@ const { data: shows } = await useAsyncData('upcoming-shows', async () => {
     )
   } else if (price.value === '$50+') {
     query = query.eq('price_type', 'fixed').or(
-      'price_max.gte.50,and(price_max.is.null,price_min.gte.50)'
+      'price_max.gt.50,and(price_max.is.null,price_min.gt.50)'
     )
   }
 
