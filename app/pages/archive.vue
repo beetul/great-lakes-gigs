@@ -8,7 +8,7 @@ useSeoMeta({
 
 const search = ref('')
 const page = ref(1)
-const pageSize = 35
+const pageSize = 45
 
 const { data: pastShows } = await useAsyncData('past-shows', async () => {
   let query = supabase
@@ -64,7 +64,7 @@ function weekday(dateStr: string) {
 
 function monthDay(dateStr: string) {
   const d = new Date(dateStr + 'T00:00:00')
-  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+  return d.toLocaleDateString('en-US', { month: 'numeric', day: 'numeric', year: '2-digit' })
 }
 </script>
 
@@ -114,7 +114,7 @@ function monthDay(dateStr: string) {
               {{ show.show_time }}
             </div>
 
-            <div class="font-bold">
+            <div>
               {{ show.title }}
             </div>
 
