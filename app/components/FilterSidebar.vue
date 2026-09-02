@@ -51,7 +51,7 @@ function toggleTag(value: string) {
       v-model="search"
       type="text"
       placeholder="search by artist/band or venue"
-      class="w-full bg-zinc-900 border border-zinc-700 rounded-lg pl-3 pr-9 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-brandColor"
+      class="w-full bg-zinc-900 border border-zinc-700 rounded-sm pl-3 pr-9 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-brandColor"
     />
   </div>
 </div>
@@ -73,7 +73,7 @@ function toggleTag(value: string) {
           <input
             type="date"
             v-model="fromDate"
-            class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-brandColor"
+            class="w-full bg-zinc-900 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm focus:outline-none focus:border-brandColor"
             style="color-scheme: dark;"
           />
         </div>
@@ -82,7 +82,7 @@ function toggleTag(value: string) {
           <input
             type="date"
             v-model="toDate"
-            class="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-brandColor"
+            class="w-full bg-zinc-900 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm focus:outline-none focus:border-brandColor"
             style="color-scheme: dark;"
           />
         </div>

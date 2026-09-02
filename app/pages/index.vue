@@ -62,7 +62,7 @@ const { data: tagOptions } = await useAsyncData('tag-options', async () => {
 })
 
 const { data: shows } = await useAsyncData('upcoming-shows', async () => {
-  let query = supabase.from('shows').select('*', { count: 'exact' })
+  let query = supabase.from('shows').select('*', { count: 'exact' }).eq('status','approved')
 
   if (fromDate.value && toDate.value) {
     query = query.gte('show_date', fromDate.value).lte('show_date', toDate.value)

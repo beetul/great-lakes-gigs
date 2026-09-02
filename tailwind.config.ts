@@ -9,7 +9,6 @@ export default {
       colors: {
         brandColor: '#4b91e2',
         accentColor: '#b76ee7',
-        highlightColor: '#e7b76e',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

@@ -8,7 +8,7 @@ useSeoMeta({
 <template>
   <div class="bg-black min-h-screen text-white">
     <div class="max-w-4xl mx-auto px-8 pt-8 pb-16">
-      <div class="bg-zinc-900 border border-zinc-800 p-5 md:p-6">
+      <div class="bg-zinc-900 border border-zinc-800 rounded-sm p-5 md:p-6">
         <h1 class="text-3xl font-display tracking-wide text-white mb-8">ABOUT</h1>
 
         <div class="space-y-6 text-zinc-300 text-base leading-relaxed">

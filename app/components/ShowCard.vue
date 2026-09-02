@@ -46,7 +46,7 @@ const monthDay = computed(() => {
       {{ show.title }}
     </h3>
     <p class="text-zinc-400 text-base">
-      <span class="text-emerald-300 font-bold">@ {{ show.venue }}</span> / {{ show.show_time }} / {{ show.price_display }}
+      <span class="text-emerald-300 font-bold">@ {{ show.venue }}</span> • {{ show.show_time }} • {{ show.price_display }}
     </p>
 
     <div class="flex gap-2 mt-2 flex-wrap">

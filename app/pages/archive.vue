@@ -82,7 +82,7 @@ function monthDay(dateStr: string) {
           v-model="search"
           type="text"
           placeholder="search by artist/band or venue"
-          class="w-full bg-zinc-900 border border-zinc-700 rounded-lg pl-3 pr-9 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-brandColor"
+          class="w-full bg-zinc-900 border border-zinc-700 rounded-sm pl-3 pr-9 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-brandColor"
         />
       </div>
 
@@ -93,7 +93,7 @@ function monthDay(dateStr: string) {
           <div class="grid grid-cols-[110px_70px_1fr_150px_100px_120px] gap-4 py-3 px-2 border-b border-zinc-700 text-xs font-bold text-zinc-400 tracking-widest">
             <div>DATE</div>
             <div>TIME</div>
-            <div>EVENT</div>
+            <div>LINEUP</div>
             <div>VENUE</div>
             <div>PRICE</div>
             <div class="hidden sm:block">ORGANIZER(S)</div>
@@ -151,7 +151,7 @@ function monthDay(dateStr: string) {
             v-else
             @click="page = p"
             :class="page === p ? 'text-brandColor' : 'text-zinc-300'"
-            class="w-9 h-9 rounded-lg text-sm transition"
+            class="w-9 h-9 rounded-sm text-sm transition"
           >
             {{ p }}
           </button>

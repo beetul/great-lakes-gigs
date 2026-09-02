@@ -38,7 +38,7 @@ const monthDay = computed(() => {
       {{ show.title }}
     </h3>
     <p class="text-zinc-500 text-sm">
-      {{ show.venue }} / {{show.show_time }} / {{ show.price_display }}
+      {{ show.venue }} • {{show.show_time }} • {{ show.price_display }}
     </p>
   </div>
 
