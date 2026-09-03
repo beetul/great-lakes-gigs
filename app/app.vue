@@ -2,7 +2,7 @@
   <div>
     <AppHeader />
     <NuxtPage />
-    <footer class="bg-black border-t border-zinc-800 py-6 px-8 flex items-center justify-center gap-48">
+    <footer class="bg-black border-t border-zinc-800 py-6 px-8 flex items-center justify-center flex-wrap gap-4 sm:gap-8">
       <NuxtLink to="/" class="text-zinc-500 text-sm font-semibold hover:text-zinc-300 transition">
         HOME
       </NuxtLink>

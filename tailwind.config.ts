@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         brandColor: '#4b91e2',
-        accentColor: '#b76ee7',
+        accentColor: '#9333ea',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

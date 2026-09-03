@@ -33,7 +33,7 @@ const { data: genreOptions } = await useAsyncData('genre-options', async () => {
   const { data, error } = await supabase.rpc('distinct_genres')
   if (error) throw error
 
-  const priority = ['emo', 'metal', 'hardcore', 'pop punk', 'electronic', 'post hardcore', 'metalcore', 'shoegaze', 'indie', 'alt rock']
+  const priority = ['emo', 'metal', 'hardcore', 'punk', 'indie', 'metalcore']
 
   return (data ?? []).filter(Boolean).sort((a, b) => {
     const aIndex = priority.indexOf(a)
