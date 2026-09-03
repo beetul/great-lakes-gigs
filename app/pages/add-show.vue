@@ -58,7 +58,7 @@ async function handleSubmit() {
   const { error } = await supabase.from('shows').insert({
     title: title.value,
     venue: venue.value,
-    city: city.value.toLowerCase(),
+    city: city.value,
     show_date: showDate.value,
     show_time: showTime.value || null,
     organizer: organizer.value || null,
