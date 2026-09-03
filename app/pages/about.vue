@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'About',
-  description: 'The purpose of Great Lakes Gigs',
+  description: 'Great Lakes Gigs is the personal project of a midwest live music enjoyer',
 })
 </script>
 
@@ -21,7 +21,7 @@ useSeoMeta({
           </p>
           <p>
             Most shows featured here lean towards the alternative music scene, highlighting independent venues and diy spaces 
-            (although shows at private venues are not listed unless authorized). Go out, be safe, and most importantly have fun.
+            (although shows at private venues are not listed unless authorized). <br> Go out, be safe, and most importantly have fun.
           </p>
           <p>
             For any questions, shoot me a message on insta <a href="https://www.instagram.com/truecaffeine/" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline">@truecaffeine</a> 
