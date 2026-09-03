@@ -106,7 +106,7 @@ function resetForm() {
   <div class="bg-black min-h-screen text-white">
     <div class="max-w-4xl mx-auto px-8 pt-8 pb-16">
       <div class="bg-zinc-900 border border-zinc-800 rounded-sm p-5 md:p-8">
-        <h1 class="text-3xl font-display tracking-wide text-white mb-2">ADD A SHOW</h1>
+        <h1 class="text-3xl font-display tracking-wide text-white mb-2">ADD SHOW</h1>
         <p class="text-zinc-400 text-sm mb-8">
           Submitted shows are reviewed before they get posted. <br>
           *required field
