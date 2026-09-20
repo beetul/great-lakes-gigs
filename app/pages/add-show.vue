@@ -3,7 +3,7 @@ const supabase = useSupabaseClient()
 
 useSeoMeta({
   title: 'Add Show',
-  description: 'Submit a show you would like to be listed on Great Lakes Gigs',
+  description: 'Submit a show you would like to see listed on Great Lakes Gigs',
 })
 
 const title = ref('')
@@ -208,7 +208,7 @@ function resetForm() {
 
             <div v-if="priceType === 'fixed'" class="grid grid-cols-2 gap-4">
               <div>
-                <label class="text-xs text-zinc-400 mb-1 block">Min price (to the nearest dollar)</label>
+                <label class="text-xs text-zinc-400 mb-1 block">Min price (round to the nearest dollar)</label>
                 <input
                   v-model.number="priceMin"
                   type="number"

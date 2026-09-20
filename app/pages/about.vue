@@ -14,7 +14,7 @@ useSeoMeta({
         <div class="space-y-6 text-zinc-300 text-base leading-relaxed">
           <p>
             With the vibrant music scene that the midwest has, it's pretty easy to get lost in the sea of announcements from 
-            music venues and bands. This page aims to organize and distill information about the newest shows across Milwaukee, 
+            music venues and bands. This page aims to organize and distill information on the newest shows across Milwaukee, 
             Chicago, and surrounding areas. Never miss another performance from your favorite band again, or maybe discover some cool new bands!
           </p>
           <p>
