@@ -3,7 +3,7 @@ const supabase = useSupabaseClient()
 
 useSeoMeta({
   title: 'Add Show',
-  description: 'Submit a show you want listed on Great Lakes Gigs',
+  description: 'Submit a show you would like to be listed on Great Lakes Gigs',
 })
 
 const title = ref('')
@@ -108,8 +108,7 @@ function resetForm() {
       <div class="bg-zinc-900 border border-zinc-800 rounded-sm p-5 md:p-8">
         <h1 class="text-3xl font-display tracking-wide text-white mb-2">ADD SHOW</h1>
         <p class="text-zinc-400 text-sm mb-8">
-          Submitted shows are reviewed before they get posted. <br>
-          *required field
+          Submitted shows are reviewed before they get posted.
         </p>
 
         <div v-if="submitted" class="text-center py-8">
@@ -117,7 +116,7 @@ function resetForm() {
           <p class="text-zinc-400 text-sm mb-6">Thanks for your submission! It'll get posted very soon.</p>
           <button
             @click="resetForm"
-            class="px-8 bg-accentColor text-white font-bold py-3 rounded-sm hover:bg-purple-700 transition"
+            class="px-8 bg-accentColor text-black font-bold py-3 rounded-sm hover:bg-submitColor transition"
           >
             Add Another Show
           </button>
@@ -125,7 +124,7 @@ function resetForm() {
 
         <form v-else @submit.prevent="handleSubmit" class="space-y-6">
           <div class="grid grid-cols-1 sm:grid-cols-[160px_1fr] items-start gap-y-4 gap-x-6">
-            <label class="text-sm font-semibold text-zinc-300 pt-2">Lineup *</label>
+            <label class="text-sm font-semibold text-zinc-300 pt-2">Lineup <span class="text-red-400">*</span></label>
             <div>
               <input
                 v-model="title"
@@ -135,7 +134,7 @@ function resetForm() {
               <p class="text-xs text-zinc-400 mt-1">e.g. "Tiny Voices + Garden Home + Snag"</p>
             </div>
 
-            <label class="text-sm font-semibold text-zinc-300 pt-2">Venue *</label>
+            <label class="text-sm font-semibold text-zinc-300 pt-2">Venue <span class="text-red-400">*</span></label>
             <div>
               <input
                 v-model="venue"
@@ -145,7 +144,7 @@ function resetForm() {
               <p class="text-xs text-zinc-400 mt-1">e.g. "Cactus Club"</p>
             </div>
 
-            <label class="text-sm font-semibold text-zinc-300 pt-2">City *</label>
+            <label class="text-sm font-semibold text-zinc-300 pt-2">City <span class="text-red-400">*</span></label>
             <div>
               <input
                 v-model="city"
@@ -154,7 +153,7 @@ function resetForm() {
               />
             </div>
 
-            <label class="text-sm font-semibold text-zinc-300 pt-2">Date *</label>
+            <label class="text-sm font-semibold text-zinc-300 pt-2">Date <span class="text-red-400">*</span></label>
             <div>
               <input
                 v-model="showDate"
@@ -197,7 +196,7 @@ function resetForm() {
           </div>
 
           <div class="border-t border-zinc-800 pt-6 space-y-4">
-            <label class="text-sm font-semibold text-zinc-300 block">Price</label>
+            <label class="text-sm font-semibold text-zinc-300 block">Cost</label>
             <select
               v-model="priceType"
               class="w-32 bg-zinc-800 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
@@ -209,7 +208,7 @@ function resetForm() {
 
             <div v-if="priceType === 'fixed'" class="grid grid-cols-2 gap-4">
               <div>
-                <label class="text-xs text-zinc-400 mb-1 block">Min price ($)</label>
+                <label class="text-xs text-zinc-400 mb-1 block">Min price (to the nearest dollar)</label>
                 <input
                   v-model.number="priceMin"
                   type="number"
@@ -217,7 +216,7 @@ function resetForm() {
                 />
               </div>
               <div>
-                <label class="text-xs text-zinc-400 mb-1 block">Max price ($, OPTIONAL)</label>
+                <label class="text-xs text-zinc-400 mb-1 block">Max price (OPTIONAL)</label>
                 <input
                   v-model.number="priceMax"
                   type="number"
@@ -228,7 +227,7 @@ function resetForm() {
 
             <div>
               <label class="text-xs text-zinc-400 mb-1 block">
-                Exact price to display (e.g. "$20, FREE, PWYC, $10 adv / $15 dos")
+                Price to display (e.g. "$20, FREE, PWYC, $10 adv / $15 dos")
               </label>
               <input
                 v-model="priceDisplay"
@@ -293,7 +292,7 @@ function resetForm() {
             <button
               type="submit"
               :disabled="submitting"
-              class="px-8 bg-accentColor text-white font-bold py-3 rounded-sm hover:bg-purple-700 disabled:opacity-50 transition"
+              class="px-8 bg-accentColor text-black font-bold py-3 rounded-sm hover:bg-submitColor disabled:opacity-50 transition"
             >
               {{ submitting ? 'Submitting...' : 'Submit' }}
             </button>

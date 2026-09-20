@@ -13,15 +13,17 @@ useSeoMeta({
 
         <div class="space-y-6 text-zinc-300 text-base leading-relaxed">
           <p>
-            With the vibrant music scene that the midwest has, it's pretty easy to get lost in the sea of 
-            social media announcements from music venues and bands. This page aims to organize and distill
-            information about the newest shows across Milwaukee, Chicago, and surrounding areas. 
-          </p>
-          <p>
+            With the vibrant music scene that the midwest has, it's pretty easy to get lost in the sea of announcements from 
+            music venues and bands. This page aims to organize and distill information about the newest shows across Milwaukee, 
+            Chicago, and surrounding areas. Never miss another performance from your favorite band again, or maybe discover some cool new bands!
           </p>
           <p>
             Most shows featured here lean towards the alternative music scene, highlighting independent venues and diy spaces 
-            (although shows at private venues are not listed unless authorized). <br> Go out, be safe, and most importantly have fun.
+            (private venues are not listed unless authorized). I list shows I'd personally go to, which are
+            mostly emo and punk adjacent.
+          </p>
+          <p>
+            Go out, be safe, and most importantly have fun.
           </p>
           <p>
             For any questions, shoot me a message on insta <a href="https://www.instagram.com/truecaffeine/" target="_blank" rel="noopener noreferrer" class="text-emerald-300 hover:underline">@truecaffeine</a> 

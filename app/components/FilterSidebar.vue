@@ -50,7 +50,7 @@ function toggleTag(value: string) {
     <input
       v-model="search"
       type="text"
-      placeholder="search by artist/band or venue"
+      placeholder="search by band or venue"
       class="w-full bg-zinc-900 border border-zinc-700 rounded-sm pl-3 pr-9 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-accentColor"
     />
   </div>
@@ -96,7 +96,7 @@ function toggleTag(value: string) {
           v-for="c in (citiesExpanded ? cityOptions : cityOptions.slice(0, 4))"
           :key="c"
           @click="toggleCity(c)"
-          :class="cities.includes(c) ? 'bg-accentColor text-white border-accentColor' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
+          :class="cities.includes(c) ? 'bg-accentColor text-black border-accentColor' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
           class="px-3 py-1.5 rounded-full border text-sm font-semibold transition"
         >
           {{ c }}
@@ -118,7 +118,7 @@ function toggleTag(value: string) {
           v-for="g in (genresExpanded ? genreOptions : genreOptions.slice(0, 6))"
           :key="g"
           @click="toggleGenre(g)"
-          :class="genres.includes(g) ? 'bg-accentColor text-white border-accentColor' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
+          :class="genres.includes(g) ? 'bg-accentColor text-black border-accentColor' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
           class="px-3 py-1.5 rounded-full border text-sm font-semibold transition"
         >
           {{ g }}
@@ -140,7 +140,7 @@ function toggleTag(value: string) {
           v-for="t in (tagsExpanded ? tagOptions : tagOptions.slice(0, 6))"
           :key="t"
           @click="toggleTag(t)"
-          :class="tags.includes(t) ? 'bg-accentColor text-white border-accentColor' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
+          :class="tags.includes(t) ? 'bg-accentColor text-black border-accentColor' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
           class="px-3 py-1.5 rounded-full border text-sm font-semibold transition"
         >
           {{ t }}
@@ -162,7 +162,7 @@ function toggleTag(value: string) {
           v-for="opt in priceOptions"
           :key="opt"
           @click="price = price === opt ? null : opt"
-          :class="price === opt ? 'bg-accentColor text-white border-accentColor' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
+          :class="price === opt ? 'bg-accentColor text-black border-accentColor' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
           class="px-3 py-1.5 rounded-full border text-sm font-semibold transition"
         >
           {{ opt }}

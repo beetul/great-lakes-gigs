@@ -8,7 +8,8 @@ export default {
     extend: {
       colors: {
         brandColor: '#4b91e2',
-        accentColor: '#9333ea',
+        accentColor: '#4BCDE2',
+        submitColor: '#40B2C4',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

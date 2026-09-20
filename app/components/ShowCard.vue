@@ -62,9 +62,6 @@ const monthDay = computed(() => {
         :key="genre"
         class="flex items-center gap-1 px-3 py-1 rounded-full border border-zinc-700 text-sm font-semibold text-zinc-300"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5">
-          <path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/>
-        </svg>
         {{ genre }}
       </span>
 

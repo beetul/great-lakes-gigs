@@ -11,7 +11,7 @@ const genres = ref<string[]>([])
 const tags = ref<string[]>([])
 const price = ref<string | null>(null)
 const page = ref(1)
-const pageSize = 28
+const pageSize = 50
 
 const { data: cityOptions } = await useAsyncData('city-options', async () => {
   const { data, error } = await supabase.rpc('distinct_cities')
@@ -156,7 +156,7 @@ watch([search, fromDate, toDate, cities, genres, tags, price], () => {
 
 useSeoMeta({
   title: 'Great Lakes Gigs',
-  description: 'A compilation of upcoming shows from independent music venues across Milwaukee, Chicago, and neighboring areas',
+  description: 'A compilation of upcoming shows from independent music venues across Milwaukee, Chicago, and surrounding areas',
 })
 </script>
 
