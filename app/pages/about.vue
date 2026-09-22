@@ -14,8 +14,8 @@ useSeoMeta({
         <div class="space-y-6 text-zinc-300 text-base leading-relaxed">
           <p>
             With the vibrant music scene that the midwest has, it's pretty easy to get lost in the sea of announcements from 
-            music venues and bands. This is a personal project that aims to organize and distill information on the newest live music across Milwaukee, 
-            Chicago, and surrounding areas. Never miss your favorite band again, or maybe discover some cool new bands!
+            music venues and bands. This is a personal project that organizes and distills information on the latest live music events
+            across Milwaukee, Chicago, and surrounding areas. Never miss your favorite band again, or maybe discover some cool new bands!
           </p>
           <p>
             Most shows featured here lean towards the alternative music scene, highlighting independent venues and diy spaces 
