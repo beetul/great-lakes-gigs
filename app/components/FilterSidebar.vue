@@ -41,20 +41,20 @@ function toggleTag(value: string) {
 <template>
   <aside class="space-y-6">
     <div>
-  <h3 class="text-xs font-bold text-zinc-400 tracking-widest mb-2">SEARCH</h3>
-  <div class="relative">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500">
-      <circle cx="10.5" cy="10.5" r="7.5"></circle>
-      <line x1="21" y1="21" x2="15.8" y2="15.8"></line>
-    </svg>
-    <input
-      v-model="search"
-      type="text"
-      placeholder="search by band or venue"
-      class="w-full bg-zinc-900 border border-zinc-700 rounded-sm pl-3 pr-9 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-accentColor"
-    />
-  </div>
-</div>
+      <h3 class="text-xs font-bold text-zinc-400 tracking-widest mb-2">SEARCH</h3>
+      <div class="relative">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500">
+          <circle cx="10.5" cy="10.5" r="7.5"></circle>
+          <line x1="21" y1="21" x2="15.8" y2="15.8"></line>
+        </svg>
+        <input
+          v-model="search"
+          type="text"
+          placeholder="search by band or venue"
+          class="w-full bg-zinc-900 border border-zinc-700 rounded-md pl-3 pr-9 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-accentColor"
+        />
+      </div>
+    </div>
 
     <div class="border-t border-zinc-800 pt-6">
       <div class="flex items-center justify-between mb-2">
@@ -73,7 +73,7 @@ function toggleTag(value: string) {
           <input
             type="date"
             v-model="fromDate"
-            class="w-full bg-zinc-900 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm focus:outline-none focus:border-accentColor"
+            class="w-full bg-zinc-900 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm focus:outline-none focus:border-accentColor"
             style="color-scheme: dark;"
           />
         </div>
@@ -82,7 +82,7 @@ function toggleTag(value: string) {
           <input
             type="date"
             v-model="toDate"
-            class="w-full bg-zinc-900 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm focus:outline-none focus:border-accentColor"
+            class="w-full bg-zinc-900 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm focus:outline-none focus:border-accentColor"
             style="color-scheme: dark;"
           />
         </div>

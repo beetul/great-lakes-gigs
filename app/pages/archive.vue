@@ -71,7 +71,7 @@ function monthDay(dateStr: string) {
 <template>
   <div class="bg-black min-h-screen text-white">
     <div class="max-w-6xl mx-auto px-8 pt-8 pb-16">
-      <h1 class="text-3xl font-display tracking-wide text-white mb-4">ARCHIVE</h1>
+      <h1 class="text-3xl font-display tracking-wide text-white mb-4">PAST SHOWS</h1>
 
       <div class="relative w-full max-w-md mb-8">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500">
@@ -82,7 +82,7 @@ function monthDay(dateStr: string) {
           v-model="search"
           type="text"
           placeholder="search by band or venue"
-          class="w-full bg-zinc-900 border border-zinc-700 rounded-sm pl-3 pr-9 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-accentColor"
+          class="w-full bg-zinc-900 border border-zinc-700 rounded-md pl-3 pr-9 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-accentColor"
         />
       </div>
 

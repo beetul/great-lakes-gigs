@@ -105,7 +105,7 @@ function resetForm() {
 <template>
   <div class="bg-black min-h-screen text-white">
     <div class="max-w-4xl mx-auto px-8 pt-8 pb-16">
-      <div class="bg-zinc-900 border border-zinc-800 rounded-sm p-5 md:p-8">
+      <div class="bg-zinc-900 border border-zinc-800 rounded-md p-5 md:p-8">
         <h1 class="text-3xl font-display tracking-wide text-white mb-2">ADD SHOW</h1>
         <p class="text-zinc-400 text-sm mb-8">
           Submitted shows are reviewed before they get posted.
@@ -116,7 +116,7 @@ function resetForm() {
           <p class="text-zinc-400 text-sm mb-6">Thanks for your submission! It'll get posted very soon.</p>
           <button
             @click="resetForm"
-            class="px-8 bg-accentColor text-black font-bold py-3 rounded-sm hover:bg-submitColor transition"
+            class="px-8 bg-accentColor text-black font-bold py-3 rounded-md hover:bg-submitColor transition"
           >
             Add Another Show
           </button>
@@ -129,7 +129,7 @@ function resetForm() {
               <input
                 v-model="title"
                 type="text"
-                class="w-full bg-zinc-800 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
+                class="w-full bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
               />
               <p class="text-xs text-zinc-400 mt-1">e.g. "Tiny Voices + Garden Home + Snag"</p>
             </div>
@@ -139,7 +139,7 @@ function resetForm() {
               <input
                 v-model="venue"
                 type="text"
-                class="w-full bg-zinc-800 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
+                class="w-full bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
               />
               <p class="text-xs text-zinc-400 mt-1">e.g. "Cactus Club"</p>
             </div>
@@ -149,7 +149,7 @@ function resetForm() {
               <input
                 v-model="city"
                 type="text"
-                class="w-full bg-zinc-800 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
+                class="w-full bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
               />
             </div>
 
@@ -158,7 +158,7 @@ function resetForm() {
               <input
                 v-model="showDate"
                 type="date"
-                class="w-full bg-zinc-800 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
+                class="w-full bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
                 style="color-scheme: dark;"
               />
             </div>
@@ -168,7 +168,7 @@ function resetForm() {
               <input
                 v-model="showTime"
                 type="text"
-                class="w-full bg-zinc-800 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
+                class="w-full bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
               />
               <p class="text-xs text-zinc-400 mt-1">e.g. "8:00pm" or "doors 6:30 / music 7"</p>
             </div>
@@ -178,7 +178,7 @@ function resetForm() {
               <input
                 v-model="organizer"
                 type="text"
-                class="w-full bg-zinc-800 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
+                class="w-full bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
               />
               <p class="text-xs text-zinc-400 mt-1">e.g. "The Basement Collective" or "Kickstand Productions"</p>
             </div>
@@ -189,7 +189,7 @@ function resetForm() {
                 v-model="ticketUrl"
                 type="url"
                 placeholder="https://..."
-                class="w-full bg-zinc-800 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-brand"
+                class="w-full bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-brand"
               />
               <p class="text-xs text-zinc-400 mt-1">Link to tickets, venue event page, or social media post</p>
             </div>
@@ -199,7 +199,7 @@ function resetForm() {
             <label class="text-sm font-semibold text-zinc-300 block">Cost</label>
             <select
               v-model="priceType"
-              class="w-32 bg-zinc-800 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
+              class="w-32 bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
             >
               <option value="fixed">Set Price</option>
               <option value="free">Free</option>
@@ -212,7 +212,7 @@ function resetForm() {
                 <input
                   v-model.number="priceMin"
                   type="number"
-                  class="w-full bg-zinc-800 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
+                  class="w-full bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
                 />
               </div>
               <div>
@@ -220,7 +220,7 @@ function resetForm() {
                 <input
                   v-model.number="priceMax"
                   type="number"
-                  class="w-full bg-zinc-800 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
+                  class="w-full bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
                 />
               </div>
             </div>
@@ -233,7 +233,7 @@ function resetForm() {
                 v-model="priceDisplay"
                 type="text"
                 :placeholder="priceType === 'free' ? 'FREE' : priceType === 'pwyc' ? 'PWYC, $10 suggested donation' : '$20'"
-                class="w-full bg-zinc-800 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-brand"
+                class="w-full bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-brand"
               />
             </div>
           </div>
@@ -248,7 +248,7 @@ function resetForm() {
                   @keydown.enter.prevent="addGenre"
                   type="text"
                   placeholder="type a genre, then press enter"
-                  class="w-full bg-zinc-800 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-brand mb-2"
+                  class="w-full bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-brand mb-2"
                 />
                 <div class="flex flex-wrap gap-2">
                   <span
@@ -270,7 +270,7 @@ function resetForm() {
                   @keydown.enter.prevent="addTag"
                   type="text"
                   placeholder="type any other relevant info, then press enter"
-                  class="w-full bg-zinc-800 border border-zinc-700 rounded-sm px-3 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-brand mb-2"
+                  class="w-full bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-brand mb-2"
                 />
                 <div class="flex flex-wrap gap-2">
                   <span
@@ -292,7 +292,7 @@ function resetForm() {
             <button
               type="submit"
               :disabled="submitting"
-              class="px-8 bg-accentColor text-black font-bold py-3 rounded-sm hover:bg-submitColor disabled:opacity-50 transition"
+              class="px-8 bg-accentColor text-black font-bold py-3 rounded-md hover:bg-submitColor disabled:opacity-50 transition"
             >
               {{ submitting ? 'Submitting...' : 'Submit' }}
             </button>
