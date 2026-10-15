@@ -28,11 +28,11 @@ export default defineNuxtConfig({
   app: {
     head: {
       script: [
-        { src: '/_vercel/insights/script.js', defer: true }
+        { src: '/_vercel/insights/script.js', defer: true },
       ],
       link: [
-        { rel: 'icon', href: 'data:,' }
-      ]
-    }
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+      ],
+    },
   },
 })
