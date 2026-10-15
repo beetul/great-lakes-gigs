@@ -86,7 +86,7 @@ function monthDay(dateStr: string) {
         />
       </div>
 
-      <div v-if="pastShows?.rows.length === 0" class="text-zinc-500">No past shows match your search.</div>
+      <div v-if="pastShows?.rows.length === 0" class="text-zinc-500">no past shows match your query T_T</div>
 
       <div v-else class="overflow-x-auto">
         <div class="min-w-[700px]">
@@ -96,7 +96,7 @@ function monthDay(dateStr: string) {
             <div>LINEUP</div>
             <div>VENUE</div>
             <div>PRICE</div>
-            <div class="hidden sm:block">ORGANIZER(S)</div>
+            <div>ORGANIZER(S)</div>
           </div>
 
           <div
@@ -126,7 +126,7 @@ function monthDay(dateStr: string) {
               {{ show.price_display }}
             </div>
 
-            <div class="hidden sm:block">
+            <div>
               {{ show.organizer }}
             </div>
           </div>
