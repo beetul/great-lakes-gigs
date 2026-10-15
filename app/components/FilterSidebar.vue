@@ -17,7 +17,7 @@ const genresExpanded = ref(false)
 const tagsExpanded = ref(false)
 const citiesExpanded = ref(false)
 
-const priceOptions = ['free', 'pwyc', 'below $15', '$15-35', '$35-50', '$50+']
+const priceOptions = ['free', 'pwyc', 'below $15', '$15-35', '$35+']
 
 function toggleCity(value: string) {
   cities.value = cities.value.includes(value)

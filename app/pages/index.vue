@@ -96,13 +96,9 @@ const { data: shows } = await useAsyncData('upcoming-shows', async () => {
     query = query.eq('price_type', 'fixed').or(
       'and(price_max.not.is.null,price_min.lte.35,price_max.gte.15),and(price_max.is.null,price_min.gte.15,price_min.lte.35)'
     )
-  } else if (price.value === '$35-50') {
+  } else if (price.value === '$35+') {
     query = query.eq('price_type', 'fixed').or(
-      'and(price_max.not.is.null,price_min.lte.50,price_max.gte.35),and(price_max.is.null,price_min.gte.35,price_min.lte.50)'
-    )
-  } else if (price.value === '$50+') {
-    query = query.eq('price_type', 'fixed').or(
-      'price_max.gt.50,and(price_max.is.null,price_min.gt.50)'
+      'price_max.gt.35,and(price_max.is.null,price_min.gt.35)'
     )
   }
 
