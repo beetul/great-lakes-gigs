@@ -230,7 +230,7 @@ function resetForm() {
               <input
                 v-model="priceDisplay"
                 type="text"
-                :placeholder="priceType === 'free' ? 'FREE' : priceType === 'pwyc' ? 'PWYC, $10 suggested donation' : '$20'"
+                :placeholder="priceType === 'free' ? 'FREE' : priceType === 'pwyc' ? 'PWYC, $10 suggested donation' : '$15 adv / $20 dos'"
                 class="w-full bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm placeholder-zinc-500 focus:outline-none focus:border-brand"
               />
             </div>
