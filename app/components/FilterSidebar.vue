@@ -93,21 +93,21 @@ function toggleTag(value: string) {
       <h3 class="text-xs font-bold text-zinc-400 tracking-widest mb-2">CITY</h3>
       <div class="flex flex-wrap gap-2">
         <button
-          v-for="c in (citiesExpanded ? cityOptions : cityOptions.slice(0, 4))"
+          v-for="c in (citiesExpanded ? cityOptions : cityOptions.slice(0, 5))"
           :key="c"
           @click="toggleCity(c)"
           :class="cities.includes(c) ? 'bg-accentColor text-black border-accentColor' : 'text-zinc-300 border-zinc-700 hover:border-zinc-500'"
-          class="px-3 py-1.5 rounded-full border text-sm font-semibold transition"
+          class="px-2.5 py-1.5 rounded-full border text-sm font-semibold transition"
         >
           {{ c }}
         </button>
       </div>
       <button
-        v-if="cityOptions.length > 4"
+        v-if="cityOptions.length > 5"
         @click="citiesExpanded = !citiesExpanded"
         class="text-xs text-zinc-500 hover:text-accentColor transition mt-2"
       >
-        {{ citiesExpanded ? '− show less' : `+ more cities (${cityOptions.length - 4})` }}
+        {{ citiesExpanded ? '− show less' : `+ more cities (${cityOptions.length - 5})` }}
       </button>
     </div>
 

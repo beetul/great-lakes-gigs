@@ -17,7 +17,7 @@ const { data: cityOptions } = await useAsyncData('city-options', async () => {
   const { data, error } = await supabase.rpc('distinct_cities')
   if (error) throw error
 
-  const priority = ['Milwaukee', 'Chicago', 'Madison']
+  const priority = ['Chicago', 'DeKalb', 'Rockford', 'Milwaukee', 'Madison']
 
   return (data ?? []).filter(Boolean).sort((a, b) => {
     const aIndex = priority.indexOf(a)
@@ -33,7 +33,7 @@ const { data: genreOptions } = await useAsyncData('genre-options', async () => {
   const { data, error } = await supabase.rpc('distinct_genres')
   if (error) throw error
 
-  const priority = ['emo', 'metal', 'hardcore', 'punk', 'indie', 'metalcore']
+  const priority = ['emo', 'electronic', 'indie', 'punk', 'metal', 'hardcore']
 
   return (data ?? []).filter(Boolean).sort((a, b) => {
     const aIndex = priority.indexOf(a)
@@ -49,7 +49,7 @@ const { data: tagOptions } = await useAsyncData('tag-options', async () => {
   const { data, error } = await supabase.rpc('distinct_tags')
   if (error) throw error
 
-  const priority = ['all ages', 'touring', 'festival', 'local show', '18+', '21+']
+  const priority = ['all ages', 'touring', '21+', 'cover show', 'festival', '18+']
 
   return (data ?? []).filter(Boolean).sort((a, b) => {
     const aIndex = priority.indexOf(a)
