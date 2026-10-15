@@ -108,7 +108,7 @@ function resetForm() {
       <div class="bg-zinc-900 border border-zinc-800 rounded-md p-5 md:p-8">
         <h1 class="text-3xl font-display tracking-wide text-white mb-2">ADD SHOW</h1>
         <p class="text-zinc-400 text-sm mb-8">
-          Submitted shows are reviewed before they get posted.
+          Submitted shows will be reviewed before they get posted.
         </p>
 
         <div v-if="submitted" class="text-center py-8">
@@ -141,7 +141,6 @@ function resetForm() {
                 type="text"
                 class="w-full bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
               />
-              <p class="text-xs text-zinc-400 mt-1">e.g. "Cactus Club"</p>
             </div>
 
             <label class="text-sm font-semibold text-zinc-300 pt-2">City <span class="text-red-400">*</span></label>
@@ -170,7 +169,6 @@ function resetForm() {
                 type="text"
                 class="w-full bg-zinc-800 border border-zinc-700 rounded-md px-3 py-2 text-white text-sm focus:outline-none focus:border-brand"
               />
-              <p class="text-xs text-zinc-400 mt-1">e.g. "8:00pm" or "doors 6:30 / music 7"</p>
             </div>
 
             <label class="text-sm font-semibold text-zinc-300 pt-2">Organizer</label>
@@ -208,7 +206,7 @@ function resetForm() {
 
             <div v-if="priceType === 'fixed'" class="grid grid-cols-2 gap-4">
               <div>
-                <label class="text-xs text-zinc-400 mb-1 block">Min price (round to the nearest dollar)</label>
+                <label class="text-xs text-zinc-400 mb-1 block">Min price (to the nearest dollar)</label>
                 <input
                   v-model.number="priceMin"
                   type="number"
@@ -216,7 +214,7 @@ function resetForm() {
                 />
               </div>
               <div>
-                <label class="text-xs text-zinc-400 mb-1 block">Max price (OPTIONAL)</label>
+                <label class="text-xs text-zinc-400 mb-1 block">Max price</label>
                 <input
                   v-model.number="priceMax"
                   type="number"
@@ -227,7 +225,7 @@ function resetForm() {
 
             <div>
               <label class="text-xs text-zinc-400 mb-1 block">
-                Price to display (e.g. "$20, FREE, PWYC, $10 adv / $15 dos")
+                Price to display on post
               </label>
               <input
                 v-model="priceDisplay"
