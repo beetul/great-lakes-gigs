@@ -290,7 +290,7 @@ function resetForm() {
             <button
               type="submit"
               :disabled="submitting"
-              class="px-8 bg-accentColor text-black font-bold py-3 rounded-md hover:bg-submitColor disabled:opacity-50 transition"
+              class="px-12 bg-accentColor text-black font-bold py-3 rounded-md hover:bg-submitColor disabled:opacity-50 transition"
             >
               {{ submitting ? 'Submitting...' : 'Submit' }}
             </button>
